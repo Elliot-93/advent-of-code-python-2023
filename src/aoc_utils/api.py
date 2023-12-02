@@ -18,23 +18,21 @@ COOKIES = {"session": SESSION}
 
 
 def load_input(day):
-    path = f"inputs/{day:02d}.txt"
+    day_path = f"inputs/{day:02d}"
+    input_path = day_path+".txt"
 
-    if not exists(path):
+    if not exists(input_path):
         url = get_url(YEAR, day)
         response = requests.get(url, cookies=COOKIES)
         if not response.ok:
             raise RuntimeError(
                 f"Request failed\n\tstatus code: {response.status_code}\n\tmessage: {response.content}"
             )
-        with open(path, "w") as f:
+        with open(input_path, "w") as f:
             f.write(response.text[:-1])
 
-        with open(path + "part1_sample.txt", "w") as f:
+        with open(day_path + "_part1_sample.txt", "w") as f:
             f.write("part 1 sample here")
 
-        with open(path + "part2_sample.txt", "w") as f:
+        with open(day_path + "_part2_sample.txt", "w") as f:
             f.write("part 2 sample here")
-
-    with open(path, "r") as f:
-        return f.read()
