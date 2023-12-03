@@ -31,8 +31,5 @@ def load_input(day):
         with open(input_path, "w") as f:
             f.write(response.text[:-1])
 
-        with open(day_path + "_part1_sample.txt", "w") as f:
-            f.write("part 1 sample here")
-
-        with open(day_path + "_part2_sample.txt", "w") as f:
-            f.write("part 2 sample here")
+        with open(day_path + "_sample.txt", "w") as f:
+            f.write("sample here")

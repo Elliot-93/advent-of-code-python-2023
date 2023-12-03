@@ -6,8 +6,7 @@ from aoc_utils.api import load_input
 
 SCRIPT_DIR = Path(__file__).parent.parent
 INPUT_FILE = Path(SCRIPT_DIR, "inputs/01.txt")
-PART1_SAMPLE = Path(SCRIPT_DIR, "inputs/01_part1_sample.txt")
-PART2_SAMPLE = Path(SCRIPT_DIR, "inputs/01_part2_sample.txt")
+SAMPLE_INPUT = Path(SCRIPT_DIR, "inputs/01_sample.txt")
 
 
 def part_one():
