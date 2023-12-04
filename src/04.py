@@ -19,11 +19,7 @@ class Card:
         self.copies = 1
 
     def get_wins(self):
-        wins = len(list(set(self.winning_nums).intersection(self.my_nums)))
-        if wins == 0:
-            return 0
-
-        return wins
+        return len(list(set(self.winning_nums).intersection(self.my_nums)))
 
     def add_copy(self):
         self.copies += 1
